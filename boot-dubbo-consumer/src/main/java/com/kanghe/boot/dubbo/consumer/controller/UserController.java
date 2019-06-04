@@ -4,6 +4,7 @@ import com.alibaba.dubbo.config.annotation.Reference;
 import com.kanghe.boot.dubbo.api.entity.User;
 import com.kanghe.boot.dubbo.api.service.IUserService;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -11,7 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
  * @Date: 2019/6/3 15:23
  * @Description:
  */
-@RestController(value = "/user")
+@RestController
+@RequestMapping(value = "/user")
 public class UserController {
 
     @Reference(version = "1.0.0")
